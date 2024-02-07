@@ -42,7 +42,7 @@ class projectEntryManager {
     }
 
     async loadEntriesFromJSON(filename) {
-        const requestURL = window.location.origin.concat("/", `${filename}`)
+        const requestURL = window.location.origin.concat(window.location.pathname).concat("/", `${filename}`)
         const request = new Request(requestURL);
         const response = await fetch(request);
         const parsedEntries = await response.json();
