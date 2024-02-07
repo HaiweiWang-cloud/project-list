@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="projects">
+        <div class="projects-toolbar">
+            <div class="projects-sort-by-date">
+                <label for="sortDateButton">Sort by</label>
+                <button onclick="sortByDate()" value="Latest" id="sortDateButton">Latest</button>
+            </div>
+
+            <div class="search-tags">
+                <button onclick="showTags()" id="addTagButton">Add Tag</button>
+                <div id="tagSelect">
+
+                </div>
+                
+            </div>
+
+            <div class="tags-container">
+                <p class="active-tags-label">Applied tags:</p>
+                <div id="activeTags"></div>
+            </div>
+            
+        </div>
+
+        <div class="projects-container" id="projectsContainer">
+        </div>
+    </div>
+    
+    <script src="js/projectEntry.js"></script>
+    <script src="js/tag.js"></script>
+    <script src="js/projectEntryManager.js"></script>
+    <script>
+        const manager = new projectEntryManager();
+        function showTags() {
+            tagSelect.style.display = tagSelect.style.display == "none" ? "flex" : "none";
+            addTagButton.innerText = tagSelect.style.display == "none" ? "Add Tag" : "Close"
+        }
+
+        function update() {
+            manager.updateTags(tagSelect, activeTags);
+            manager.populateContainer(projectsContainer);
+        }
+
+        async function load() {
+            const resp = await manager.loadEntriesFromJSON("projectList.JSON");
+            update();
+        }
+
+        function sortByDate() {
+            const descending = sortDateButton.value == "Latest" ? false : true;
+            sortDateButton.value = sortDateButton.value == "Latest" ? "Earliest" : "Latest";
+            sortDateButton.innerText = sortDateButton.value;
+            manager.sortEntriesById(descending);
+            update();
+        }
+        
+        load();
+        window.addEventListener("popstate", () => {
+            update();
+        });
+    </script>
+</body>
+</html>

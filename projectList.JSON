@@ -1,0 +1,111 @@
+[
+    {
+        "id": 100,
+        "author": "Haiwei Wang",
+        "date": "16-Jan-2024",
+        "icon": "images/nbodypendulum.png",
+        "title": "N-Body Pendulums with Extended Position Based Dynamics (XPBD)",
+        "description": "A simple and fun demonstration of the XPBD physics simulation method with fixed-distance constraints.",
+        "links": [
+            {
+                "name": "Source",
+                "href": "https://github.com/HaiweiWang-cloud/NBodyPendulums"
+            }, {
+                "name": "Demo",
+                "href": "https://haiweiwang-cloud.github.io/NBodyPendulums/"
+            }
+        ],
+        "tags": [
+            "2D",
+            "Numerical methods",
+            "Classical mechanics"
+        ]
+    },
+    {
+        "id": 101,
+        "author": "Haiwei Wang",
+        "date": "22-Jan-2024",
+        "icon": "images/2dfluid.png",
+        "title": "2D Eulerian Fluid Simulation",
+        "description": "Incompressible fluid dynamics using semi-Lagrangian advection with visualisations of velocity, smoke, streamlines and pressure.",
+        "links": [
+            {
+                "name": "Source",
+                "href": "https://github.com/HaiweiWang-cloud/2DEulerianFluidSimulator"
+            }, {
+                "name": "Demo",
+                "href": "https://haiweiwang-cloud.github.io/2DEulerianFluidSimulator/"
+            }
+        ],
+        "tags": [
+            "2D",
+            "Numerical methods",
+            "Fluids",
+            "PDEs"
+        ]
+    },
+    {
+        "id": 102,
+        "author": "Haiwei Wang",
+        "date": "26-Jan-2024",
+        "icon": "images/2dwave.png",
+        "title": "2D Scalar Wave Equation",
+        "description": "Visualisation of the physics of waves using the finite-difference numerical approximation of the scalar wave equation.",
+        "links": [
+            {
+                "name": "Source",
+                "href": "https://github.com/HaiweiWang-cloud/2DScalarWaveSimulator"
+            }, {
+                "name": "Demo",
+                "href": "https://haiweiwang-cloud.github.io/2DScalarWaveSimulator/"
+            }
+        ],
+        "tags": [
+            "2D",
+            "Numerical methods",
+            "PDEs"
+        ]
+    },
+    {
+        "id": 99,
+        "author": "Haiwei Wang",
+        "date": "4-Jan-2024",
+        "icon": "images/tetris.png",
+        "title": "Tetris Game",
+        "description": "My own tetris game made using vanilla JavaScript with HTMLCanvas extending the idea of the snake game.",
+        "links": [
+            {
+                "name": "Play",
+                "href": "https://haiweiwang-cloud.github.io/tetris-game/"
+            }, {
+                "name": "Code",
+                "href": "https://github.com/HaiweiWang-cloud/tetris-game"
+            }
+        ],
+        "tags": [
+            "2D",
+            "Game"
+        ]
+    },
+    {
+        "id": 98,
+        "author": "Haiwei Wang",
+        "date": "28-Dec-2023",
+        "icon": "images/snake.png",
+        "title": "Snake Game",
+        "description": "Simple game with a grid coordinate system and rendering solid pixels using HTMLCanvas.",
+        "links": [
+            {
+                "name": "Play",
+                "href": "https://haiweiwang-cloud.github.io/snake-game/"
+            }, {
+                "name": "Code",
+                "href": "https://github.com/HaiweiWang-cloud/snake-game"
+            }
+        ],
+        "tags": [
+            "2D",
+            "Game"
+        ]
+    }
+]
